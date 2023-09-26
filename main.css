@@ -4,7 +4,7 @@ body{
 #Page{
     width: 1200px;
     height: 1000px;
-    background-color: rgb(85, 24, 255);
+    background-color: rgb(0, 26, 255);
     margin: 0 auto;
     
 }
@@ -21,7 +21,7 @@ body{
  #content{
     width: 1200px;
     min-height: 25px;
-    background-color: rgb(255, 21, 243);
+    background-color: rgb(0, 26, 255);
  }
  .navButton{
     width: 280px;
@@ -78,10 +78,43 @@ body{
     color: #000000;
 }
 .login{
-    width: 450px;
-    height: 300px;
+    position: relative;
+    width: 320px;
+    height: 250px;
     background-color: #000000;
     margin: 0 auto;
     margin-top: 200px;
+    
 }
- 
+.login input{
+    padding: 10px;
+    font-size: 10px;
+    margin-top: 20px;
+    margin-left: 7px;
+    
+}
+
+.myButton {
+	box-shadow:inset 0px -3px 7px 0px #f80ba9;
+	background:linear-gradient(to bottom, #ff0cc2 5%, #fa06c5 100%);
+	background-color:#9b2988;
+	border-radius:3px;
+	border:1px solid #0b0e07;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	padding:9px 23px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #263666;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #6e056e 5%, #632df9 100%);
+	background-color:#0688fa;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
