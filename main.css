@@ -4,7 +4,7 @@ body{
 #Page{
     width: 1200px;
     height: 1000px;
-    background-color: rgb(0, 26, 255);
+    background-color: rgb(190, 190, 190);
     margin: 0 auto;
     
 }
@@ -16,12 +16,12 @@ body{
 #navi{
     width: 1200px;
     min-height: 5px;
-    background-color: rgb(0, 26, 255);
+    background-color: rgb(190, 190, 190);
  }
  #content{
     width: 1200px;
     min-height: 25px;
-    background-color: rgb(0, 26, 255);
+    background-color: rgb(190, 190, 190);
  }
  .navButton{
     width: 280px;
