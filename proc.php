@@ -1,5 +1,5 @@
 <?php
 $l = $_POST["login"];
-$p = $a = $_POST["password"];
-echo "$l, HELLO, $p ";
+$p = $_POST["Password"];
+echo " Hello   , $p,Password,$p ";
 ?>
