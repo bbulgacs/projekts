@@ -5,6 +5,7 @@ $l = $_POST["login"];
 $p = md5($_POST["Password"]);
 
 include('cfg.php');
-$result = $mysqli->query("UPDATE `projekts` SET `id`=null,`name`='$v',`sname`='$u',`login`='$l',`password`='$p'");
+$result = $mysqli->query("INSERT INTO `projekts`(`id`, `name`, `sname`, `login`, `password`) VALUES (null,'$v','$u','$l','$p')");
+
 
 ?>
