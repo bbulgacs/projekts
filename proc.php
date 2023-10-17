@@ -1,13 +1,17 @@
 <?php
 $l = $_POST["login"];
-$p = $_POST["Password"];
+$p = md5($_POST["Password"]);
 
-include('cfg,ph');
-$mysqli = new mysqli("SELECT * FROM users WHERE login=$l AND password$p")
-if(mysqli_num_rows($result) > 0){
+include('cfg.php');
+$result = $mysqli->query("SELECT * FROM projekts WHERE login='$l' AND password='md5($p)'");
+if (mysqli_num_rows($result) > 0){
     echo "GOOOD!!!";
 
 }
+else{
+    echo "bye bye!!!";
+}
 
-echo " Hello - $l  ,Password - $p ";
+
 ?>
+
