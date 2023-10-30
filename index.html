@@ -28,8 +28,8 @@
         <div class = "login">
             <form action='proc.php' method='POST'>
             
-                <input name= 'login' type= "User"placeholder="User">
-                <input name='Password' type= "Password"placeholder="Password">
+                <input onchange="enableButton()" id= "loginName" name="login" type="User" placeholder="User"/>
+                <input onchange="enableButton()" id= "loginPassword" name='Password' type= "Password"placeholder="Password">
                <br/><br/>
                 <button class="myButton"> login</button>
 
@@ -39,12 +39,12 @@
         <div id='content'>
             <div class = "login">
                 <form action='add.php' method='POST'>
-                    <input name= 'vards' type= "User"placeholder="vards">
+                    <input name =  "vards" type= "User"placeholder="vards">
                     <input name= 'uzvards' type= "User"placeholder="uzvards">
                     <input name= 'login' type= "User"placeholder="User">
                     <input name='Password' type= "Password"placeholder="Password">
                    <br/><br/>
-                    <button class="myButton"> login</button>
+                    <button id='login' disabled type="submit" class="myButton"> login</button>
     
                 </form>
             </div>
