@@ -1,4 +1,53 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Sign Up</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID_HERE">
+</head>
+<body>
+    <div class="banner">
+        <h1>Welcome to our website</h1>
+        <div class="button-container">
+            <button class="google-signin-button" onclick="signInWithGoogle()">Sign in with Google</button>
+        </div>
+    </div>
+
+    <script>
+        function signInWithGoogle() {
+            gapi.auth2.getAuthInstance().signIn();
+        }
+
+        function onSignIn(googleUser) {
+            var profile = googleUser.getBasicProfile();
+            var email = profile.getEmail();
+            console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+            console.log('Name: ' + profile.getName());
+            console.log('Image URL: ' + profile.getImageUrl());
+            console.log('Email: ' + email); // This is null if the 'email' scope is not present.
+            
+            // Check if the email matches the required format
+            if (email.endsWith('@marupe.edu.lv')) {
+                // Email matches the required format, proceed with sign-in
+                console.log('Email matches the required format');
+                // Here, you can redirect the user to a different page or perform any other actions
+            } else {
+                // Email does not match the required format, display an error message
+                console.log('Email does not match the required format');
+                alert('Please sign in with a valid (name.surname)@marupe.edu.lv email address.');
+                // Optionally, sign the user out from Google to prevent further access
+                gapi.auth2.getAuthInstance().signOut();
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset='utf-8'>
@@ -51,6 +100,24 @@
     </div>
 
 </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Uploader</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Photo Uploader</h1>
+        <input type="file" id="fileInput" accept="image/*">
+        <button onclick="uploadPhoto()">Upload</button>
+        <div id="preview"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
 
     </div>
 </body>
@@ -83,5 +150,24 @@
 </head>
 <body>
     <img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fmarupe.edu.lv%2Fwp-content%2Fuploads%2F2020%2F09%2Fcropped-rect911-1.png&tbnid=TV5daZ6ZG1mU9M&vet=12ahUKEwir9-rX-rmEAxUoQlUIHZbHAfUQMygFegQIARBM..i&imgrefurl=https%3A%2F%2Fmarupe.edu.lv%2F&docid=sewFM7G3VVpRMM&w=512&h=512&q=m%C4%81rupes%20valsts%20%C4%A3imn%C4%81zija&safe=active&ved=2ahUKEwir9-rX-rmEAxUoQlUIHZbHAfUQMygFegQIARBM" alt="Marupes Valsts Ģimnāzija">
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Uploader</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Photo Uploader</h1>
+        <input type="file" id="fileInput" accept="image/*">
+        <button onclick="uploadPhoto()">Upload</button>
+        <div id="preview"></div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
